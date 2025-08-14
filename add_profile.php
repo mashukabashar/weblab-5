@@ -64,105 +64,106 @@ if(isset($_POST['submit'])){
     <h2>Add New Biodata</h2>
     
     <form method="POST" enctype="multipart/form-data" class="profile-form">
-        <label>Full Name</label>
-        <input type="text" name="fullname" placeholder="Full Name" required>
+    <label>Full Name</label>
+    <input type="text" name="fullname" placeholder="Full Name" required>
 
-        <label>Gender</label>
-        <select name="gender" required>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-        </select>
+    <label>Gender</label>
+    <select name="gender" required>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
 
-        <label>Date of Birth</label>
-        <input type="date" name="dob" required>
+    <label>Date of Birth</label>
+    <input type="date" name="dob" required>
 
-        <label>Religion</label>
-        <input type="text" name="religion" placeholder="Religion">
+    <label>Height</label>
+    <input type="text" name="height" placeholder="Height">
 
-        <label>Caste</label>
-        <input type="text" name="caste" placeholder="Caste">
+    <label>Weight</label>
+    <input type="text" name="weight" placeholder="Weight">
 
-        <label>City</label>
-        <input type="text" name="city" placeholder="City">
+    <label>Marital Status</label>
+    <input type="text" name="marital_status" placeholder="Marital Status">
 
-        <label>Country</label>
-        <input type="text" name="country" placeholder="Country">
+    <label>Religion</label>
+    <input type="text" name="religion" placeholder="Religion">
 
-        <label>Contact</label>
-        <input type="text" name="contact" placeholder="Contact">
+    <label>Caste</label>
+    <input type="text" name="caste" placeholder="Caste">
 
-        <label>Height</label>
-        <input type="text" name="height" placeholder="Height">
+    <label>Blood Group</label>
+    <input type="text" name="blood" placeholder="Blood Group">
 
-        <label>Weight</label>
-        <input type="text" name="weight" placeholder="Weight">
+    <label>City</label>
+    <input type="text" name="city" placeholder="City">
 
-        <label>Marital Status</label>
-        <input type="text" name="marital_status" placeholder="Marital Status">
+    <label>Permanent City</label>
+    <input type="text" name="permanent_city" placeholder="Permanent City">
 
-        <label>Blood Group</label>
-        <input type="text" name="blood" placeholder="Blood Group">
+    <label>Country</label>
+    <input type="text" name="country" placeholder="Country">
 
-        <label>Permanent City</label>
-        <input type="text" name="permanent_city" placeholder="Permanent City">
+    <label>Nationality</label>
+    <input type="text" name="nationality" placeholder="Nationality">
 
-        <label>Nationality</label>
-        <input type="text" name="nationality" placeholder="Nationality">
+    <label>Languages Known</label>
+    <input type="text" name="language_known" placeholder="Languages Known">
 
-        <label>Languages Known</label>
-        <input type="text" name="language_known" placeholder="Languages Known">
+    <label>Hobbies & Interests</label>
+    <input type="text" name="hobbies_and_interest" placeholder="Hobbies & Interests">
 
-        <label>Hobbies & Interests</label>
-        <input type="text" name="hobbies_and_interest" placeholder="Hobbies & Interests">
+    <label>Profession</label>
+    <input type="text" name="profession" placeholder="Profession">
 
-        <label>Profession</label>
-        <input type="text" name="profession" placeholder="Profession">
+    <label>Education</label>
+    <input type="text" name="education" placeholder="Education">
 
-        <label>Education</label>
-        <input type="text" name="education" placeholder="Education">
+    <label>University</label>
+    <input type="text" name="universityname" placeholder="University Name">
 
-        <label>University</label>
-        <input type="text" name="universityname" placeholder="University Name">
+    <label>HSC Year</label>
+    <input type="text" name="hsc_year" placeholder="HSC Year">
 
-        <label>HSC Year</label>
-        <input type="text" name="hsc_year" placeholder="HSC Year">
+    <label>College</label>
+    <input type="text" name="college_name" placeholder="College Name">
 
-        <label>College</label>
-        <input type="text" name="college_name" placeholder="College Name">
+    <label>SSC Year</label>
+    <input type="text" name="ssc_year" placeholder="SSC Year">
 
-        <label>SSC Year</label>
-        <input type="text" name="ssc_year" placeholder="SSC Year">
+    <label>School</label>
+    <input type="text" name="school_name" placeholder="School Name">
 
-        <label>School</label>
-        <input type="text" name="school_name" placeholder="School Name">
+    <label>Father's Name</label>
+    <input type="text" name="father_name" placeholder="Father's Name">
 
-        <label>Father's Name</label>
-        <input type="text" name="father_name" placeholder="Father's Name">
+    <label>Father's Occupation</label>
+    <input type="text" name="father_occupation" placeholder="Father's Occupation">
 
-        <label>Father's Occupation</label>
-        <input type="text" name="father_occupation" placeholder="Father's Occupation">
+    <label>Mother's Name</label>
+    <input type="text" name="mother_name" placeholder="Mother's Name">
 
-        <label>Mother's Name</label>
-        <input type="text" name="mother_name" placeholder="Mother's Name">
+    <label>Mother's Occupation</label>
+    <input type="text" name="mother_occupation" placeholder="Mother's Occupation">
 
-        <label>Mother's Occupation</label>
-        <input type="text" name="mother_occupation" placeholder="Mother's Occupation">
+    <label>Siblings</label>
+    <input type="number" name="siblings" placeholder="Number of Siblings">
 
-        <label>Siblings</label>
-        <input type="number" name="siblings" placeholder="Number of Siblings">
+    <label>Contact</label>
+    <input type="text" name="contact" placeholder="Contact">
 
-        <label>Email</label>
-        <input type="email" name="email" placeholder="Email">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Email">
 
-        <label>Partner Preference</label>
-        <input type="text" name="partner_preference" placeholder="Partner Preference">
+    <label>Partner Preference</label>
+    <input type="text" name="partner_preference" placeholder="Partner Preference">
 
-        <label>Profile Image</label>
-        <input type="file" name="image" required>
+    <label>Profile Image</label>
+    <input type="file" name="image" required>
 
-        <button type="submit" name="submit">Add Biodata</button>
-    </form>
+    <button type="submit" name="submit">Add Biodata</button>
+</form>
+
 </div>
 
 </body>

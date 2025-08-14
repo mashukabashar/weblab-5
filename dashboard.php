@@ -37,19 +37,22 @@ $result = mysqli_query($conn, "SELECT * FROM profiles WHERE user_id='$user_id'")
 
                     <p><strong>Gender:</strong> <?= $row['gender'] ?></p>
                     <p><strong>DOB:</strong> <?= $row['dob'] ?></p>
-                    <p><strong>Religion:</strong> <?= $row['religion'] ?></p>
-                    <p><strong>Caste:</strong> <?= $row['caste'] ?></p>
-                    <p><strong>City:</strong> <?= $row['city'] ?></p>
-                    <p><strong>Country:</strong> <?= $row['country'] ?></p>
-                    <p><strong>Contact:</strong> <?= $row['contact'] ?></p>
+                    
                     <p><strong>Height:</strong> <?= $row['height'] ?></p>
                     <p><strong>Weight:</strong> <?= $row['weight'] ?></p>
+
                     <p><strong>Marital Status:</strong> <?= $row['marital_status'] ?></p>
+                    <p><strong>Religion:</strong> <?= $row['religion'] ?></p>
+
+                    <p><strong>Caste:</strong> <?= $row['caste'] ?></p>
                     <p><strong>Blood Group:</strong> <?= $row['blood'] ?></p>
+                    <p><strong>City:</strong> <?= $row['city'] ?></p>
                     <p><strong>Permanent City:</strong> <?= $row['permanent_city'] ?></p>
+                    <p><strong>Country:</strong> <?= $row['country'] ?></p>
                     <p><strong>Nationality:</strong> <?= $row['nationality'] ?></p>
                     <p><strong>Languages Known:</strong> <?= $row['language_known'] ?></p>
                     <p><strong>Hobbies & Interests:</strong> <?= $row['hobbies_and_interest'] ?></p>
+
                     <p><strong>Profession:</strong> <?= $row['profession'] ?></p>
                     <p><strong>Education:</strong> <?= $row['education'] ?></p>
                     <p><strong>University:</strong> <?= $row['universityname'] ?></p>
@@ -62,6 +65,7 @@ $result = mysqli_query($conn, "SELECT * FROM profiles WHERE user_id='$user_id'")
                     <p><strong>Mother's Name:</strong> <?= $row['mother_name'] ?></p>
                     <p><strong>Mother's Occupation:</strong> <?= $row['mother_occupation'] ?></p>
                     <p><strong>Siblings:</strong> <?= $row['siblings'] ?></p>
+                    <p><strong>Contact:</strong> <?= $row['contact'] ?></p>
                     <p><strong>Email:</strong> <?= $row['email'] ?></p>
                     <p><strong>Partner Preference:</strong> <?= $row['partner_preference'] ?></p>
 

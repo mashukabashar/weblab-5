@@ -36,16 +36,15 @@ if(isset($_POST['update'])){
     $fullname = $_POST['fullname'];
     $gender = $_POST['gender'];
     $dob = $_POST['dob'];
-    $religion = $_POST['religion'];
-    $caste = $_POST['caste'];
-    $city = $_POST['city'];
-    $country = $_POST['country'];
-    $contact = $_POST['contact'];
     $height = $_POST['height'];
     $weight = $_POST['weight'];
     $marital_status = $_POST['marital_status'];
+    $religion = $_POST['religion'];
+    $caste = $_POST['caste'];
     $blood = $_POST['blood'];
+    $city = $_POST['city'];
     $permanent_city = $_POST['permanent_city'];
+    $country = $_POST['country'];
     $nationality = $_POST['nationality'];
     $language_known = $_POST['language_known'];
     $hobbies_and_interest = $_POST['hobbies_and_interest'];
@@ -61,6 +60,7 @@ if(isset($_POST['update'])){
     $mother_name = $_POST['mother_name'];
     $mother_occupation = $_POST['mother_occupation'];
     $siblings = $_POST['siblings'];
+    $contact = $_POST['contact'];
     $email = $_POST['email'];
     $partner_preference = $_POST['partner_preference'];
 
@@ -80,16 +80,15 @@ if(isset($_POST['update'])){
                 fullname='$fullname',
                 gender='$gender',
                 dob='$dob',
-                religion='$religion',
-                caste='$caste',
-                city='$city',
-                country='$country',
-                contact='$contact',
                 height='$height',
                 weight='$weight',
                 marital_status='$marital_status',
+                religion='$religion',
+                caste='$caste',
                 blood='$blood',
+                city='$city',
                 permanent_city='$permanent_city',
+                country='$country',
                 nationality='$nationality',
                 language_known='$language_known',
                 hobbies_and_interest='$hobbies_and_interest',
@@ -105,6 +104,7 @@ if(isset($_POST['update'])){
                 mother_name='$mother_name',
                 mother_occupation='$mother_occupation',
                 siblings='$siblings',
+                contact='$contact',
                 email='$email',
                 partner_preference='$partner_preference',
                 image='$image'
@@ -119,109 +119,111 @@ if(isset($_POST['update'])){
 <div class="container">
     <h2>Edit Biodata</h2>
     
-    <form method="POST" enctype="multipart/form-data" class="profile-form">
-        <label>Full Name</label>
-        <input type="text" name="fullname" value="<?= $profile['fullname'] ?>" required>
+<form method="POST" enctype="multipart/form-data" class="profile-form">
 
-        <label>Gender</label>
-        <select name="gender" required>
-            <option value="Male" <?= $profile['gender']=='Male'?'selected':'' ?>>Male</option>
-            <option value="Female" <?= $profile['gender']=='Female'?'selected':'' ?>>Female</option>
-            <option value="Other" <?= $profile['gender']=='Other'?'selected':'' ?>>Other</option>
-        </select>
+<label>Full Name</label>
+<input type="text" name="fullname" value="<?= $profile['fullname'] ?>" required>
 
-        <label>Date of Birth</label>
-        <input type="date" name="dob" value="<?= $profile['dob'] ?>" required>
+<label>Gender</label>
+<select name="gender" required>
+    <option value="Male" <?= $profile['gender']=='Male'?'selected':'' ?>>Male</option>
+    <option value="Female" <?= $profile['gender']=='Female'?'selected':'' ?>>Female</option>
+    <option value="Other" <?= $profile['gender']=='Other'?'selected':'' ?>>Other</option>
+</select>
 
-        <label>Religion</label>
-        <input type="text" name="religion" value="<?= $profile['religion'] ?>">
+<label>Date of Birth</label>
+<input type="date" name="dob" value="<?= $profile['dob'] ?>" required>
 
-        <label>Caste</label>
-        <input type="text" name="caste" value="<?= $profile['caste'] ?>">
+<label>Height</label>
+<input type="text" name="height" value="<?= $profile['height'] ?>">
 
-        <label>City</label>
-        <input type="text" name="city" value="<?= $profile['city'] ?>">
+<label>Weight</label>
+<input type="text" name="weight" value="<?= $profile['weight'] ?>">
 
-        <label>Country</label>
-        <input type="text" name="country" value="<?= $profile['country'] ?>">
+<label>Marital Status</label>
+<input type="text" name="marital_status" value="<?= $profile['marital_status'] ?>">
 
-        <label>Contact</label>
-        <input type="text" name="contact" value="<?= $profile['contact'] ?>">
+<label>Religion</label>
+<input type="text" name="religion" value="<?= $profile['religion'] ?>">
 
-        <label>Height</label>
-        <input type="text" name="height" value="<?= $profile['height'] ?>">
+<label>Caste</label>
+<input type="text" name="caste" value="<?= $profile['caste'] ?>">
 
-        <label>Weight</label>
-        <input type="text" name="weight" value="<?= $profile['weight'] ?>">
+<label>Blood Group</label>
+<input type="text" name="blood" value="<?= $profile['blood'] ?>">
 
-        <label>Marital Status</label>
-        <input type="text" name="marital_status" value="<?= $profile['marital_status'] ?>">
+<label>City</label>
+<input type="text" name="city" value="<?= $profile['city'] ?>">
 
-        <label>Blood Group</label>
-        <input type="text" name="blood" value="<?= $profile['blood'] ?>">
+<label>Permanent City</label>
+<input type="text" name="permanent_city" value="<?= $profile['permanent_city'] ?>">
 
-        <label>Permanent City</label>
-        <input type="text" name="permanent_city" value="<?= $profile['permanent_city'] ?>">
+<label>Country</label>
+<input type="text" name="country" value="<?= $profile['country'] ?>">
 
-        <label>Nationality</label>
-        <input type="text" name="nationality" value="<?= $profile['nationality'] ?>">
+<label>Nationality</label>
+<input type="text" name="nationality" value="<?= $profile['nationality'] ?>">
 
-        <label>Languages Known</label>
-        <input type="text" name="language_known" value="<?= $profile['language_known'] ?>">
+<label>Languages Known</label>
+<input type="text" name="language_known" value="<?= $profile['language_known'] ?>">
 
-        <label>Hobbies & Interests</label>
-        <input type="text" name="hobbies_and_interest" value="<?= $profile['hobbies_and_interest'] ?>">
+<label>Hobbies & Interests</label>
+<input type="text" name="hobbies_and_interest" value="<?= $profile['hobbies_and_interest'] ?>">
 
-        <label>Profession</label>
-        <input type="text" name="profession" value="<?= $profile['profession'] ?>">
+<label>Profession</label>
+<input type="text" name="profession" value="<?= $profile['profession'] ?>">
 
-        <label>Education</label>
-        <input type="text" name="education" value="<?= $profile['education'] ?>">
+<label>Education</label>
+<input type="text" name="education" value="<?= $profile['education'] ?>">
 
-        <label>University</label>
-        <input type="text" name="universityname" value="<?= $profile['universityname'] ?>">
+<label>University</label>
+<input type="text" name="universityname" value="<?= $profile['universityname'] ?>">
 
-        <label>HSC Year</label>
-        <input type="text" name="hsc_year" value="<?= $profile['hsc_year'] ?>">
+<label>HSC Year</label>
+<input type="text" name="hsc_year" value="<?= $profile['hsc_year'] ?>">
 
-        <label>College</label>
-        <input type="text" name="college_name" value="<?= $profile['college_name'] ?>">
+<label>College</label>
+<input type="text" name="college_name" value="<?= $profile['college_name'] ?>">
 
-        <label>SSC Year</label>
-        <input type="text" name="ssc_year" value="<?= $profile['ssc_year'] ?>">
+<label>SSC Year</label>
+<input type="text" name="ssc_year" value="<?= $profile['ssc_year'] ?>">
 
-        <label>School</label>
-        <input type="text" name="school_name" value="<?= $profile['school_name'] ?>">
+<label>School</label>
+<input type="text" name="school_name" value="<?= $profile['school_name'] ?>">
 
-        <label>Father's Name</label>
-        <input type="text" name="father_name" value="<?= $profile['father_name'] ?>">
+<label>Father's Name</label>
+<input type="text" name="father_name" value="<?= $profile['father_name'] ?>">
 
-        <label>Father's Occupation</label>
-        <input type="text" name="father_occupation" value="<?= $profile['father_occupation'] ?>">
+<label>Father's Occupation</label>
+<input type="text" name="father_occupation" value="<?= $profile['father_occupation'] ?>">
 
-        <label>Mother's Name</label>
-        <input type="text" name="mother_name" value="<?= $profile['mother_name'] ?>">
+<label>Mother's Name</label>
+<input type="text" name="mother_name" value="<?= $profile['mother_name'] ?>">
 
-        <label>Mother's Occupation</label>
-        <input type="text" name="mother_occupation" value="<?= $profile['mother_occupation'] ?>">
+<label>Mother's Occupation</label>
+<input type="text" name="mother_occupation" value="<?= $profile['mother_occupation'] ?>">
 
-        <label>Siblings</label>
-        <input type="number" name="siblings" value="<?= $profile['siblings'] ?>">
+<label>Siblings</label>
+<input type="number" name="siblings" value="<?= $profile['siblings'] ?>">
 
-        <label>Email</label>
-        <input type="email" name="email" value="<?= $profile['email'] ?>">
+<label>Contact</label>
+<input type="text" name="contact" value="<?= $profile['contact'] ?>">
 
-        <label>Partner Preference</label>
-        <input type="text" name="partner_preference" value="<?= $profile['partner_preference'] ?>">
+<label>Email</label>
+<input type="email" name="email" value="<?= $profile['email'] ?>">
 
-        <label>Profile Image</label>
-        <div class="image-preview">
-            <img src="uploads/<?= $profile['image'] ?>" width="120" alt="Profile Image">
-        </div>
-        <input type="file" name="image">
+<label>Partner Preference</label>
+<input type="text" name="partner_preference" value="<?= $profile['partner_preference'] ?>">
 
-        <button type="submit" name="update">Update Biodata</button>
-    </form>
+<label>Profile Image</label>
+<div class="image-preview">
+    <img src="uploads/<?= $profile['image'] ?>" width="120" alt="Profile Image">
+</div>
+<input type="file" name="image">
+
+<button type="submit" name="update">Update Biodata</button>
+</form>
+
 </div>
 
 </body>
