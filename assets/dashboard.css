@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    color: #333;
+}
+
+.header-buttons .btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.header-buttons .btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-logout {
+    background-color: #dc3545;
+}
+
+.btn-logout:hover {
+    background-color: #b02a37;
+}
+
+.profiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.profile-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-card h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.profile-card p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.actions {
+    margin-top: 15px;
+}
+
+.actions .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    margin: 3px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn-edit {
+    background-color: #28a745;
+}
+
+.btn-edit:hover {
+    background-color: #218838;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #b02a37;
+}
