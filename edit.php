@@ -24,7 +24,6 @@ if(!isset($_GET['id'])){
 
 $profile_id = $_GET['id'];
 
-// Fetch existing profile data
 $result = mysqli_query($conn, "SELECT * FROM profiles WHERE id='$profile_id' AND user_id='$user_id'");
 if(mysqli_num_rows($result) == 0){
     header("Location: dashboard.php");
@@ -33,7 +32,6 @@ if(mysqli_num_rows($result) == 0){
 
 $profile = mysqli_fetch_assoc($result);
 
-// Handle form submission
 if(isset($_POST['update'])){
     $fullname = $_POST['fullname'];
     $gender = $_POST['gender'];
@@ -44,21 +42,18 @@ if(isset($_POST['update'])){
     $country = $_POST['country'];
     $contact = $_POST['contact'];
 
-    // Handle image upload
     if(isset($_FILES['image']) && $_FILES['image']['name'] != ''){
         $image = $_FILES['image']['name'];
         $target = "uploads/".basename($image);
         move_uploaded_file($_FILES['image']['tmp_name'], $target);
 
-        // Delete old image
         if(file_exists('uploads/'.$profile['image'])){
             unlink('uploads/'.$profile['image']);
         }
     } else {
-        $image = $profile['image']; // Keep old image
+        $image = $profile['image'];
     }
 
-    // Update profile in database
     $query = "UPDATE profiles SET 
                 fullname='$fullname',
                 gender='$gender',

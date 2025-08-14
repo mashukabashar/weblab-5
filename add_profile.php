@@ -25,7 +25,6 @@ if(isset($_POST['submit'])){
     $country = $_POST['country'];
     $contact = $_POST['contact'];
     
-    // Image upload
     $image = $_FILES['image']['name'];
     $target = "uploads/".basename($image);
     move_uploaded_file($_FILES['image']['tmp_name'], $target);
